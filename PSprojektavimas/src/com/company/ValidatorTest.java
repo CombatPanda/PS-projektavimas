@@ -16,60 +16,72 @@ class ValidatorTest {
     }
     //Tests for password
     @Test
-    void passwordCheckerLengthTest() {
+    void passwordCheckerCorrectTest() {
         String password = "ABC123456789@";
         assertTrue(validator.validatePassword(password));
     }
-
+    @Test
+    void passwordCheckerLengthTest() {
+        String password = "A123@";
+        assertFalse(validator.validatePassword(password));
+    }
     @Test
     void passwordCheckerUppercaseTest() {
-        String password = "ABC123456789@";
-        assertTrue(validator.validatePassword(password));
+        String password = "abc123456789@";
+        assertFalse(validator.validatePassword(password));
     }
-
     @Test
     void passwordCheckerSpecialSymbolTest() {
-        String password = "ABC123456789@";
-        assertTrue(validator.validatePassword(password));
+        String password = "abc123456789";
+        assertFalse(validator.validatePassword(password));
     }
     //Tests for phone
     @Test
-    void phoneValidatorOtherSymbolTest() {
-        String number = "860806655@";
+    void phoneValidatorCorrectTest() {
+        String number = "+37060806912";
         assertTrue(validator.validatePhone(number));
+    }
+    @Test
+    void phoneValidatorOtherSymbolTest() {
+        String number = "+37060806912@";
+        assertFalse(validator.validatePhone(number));
     }
 
     @Test
     void phoneValidatorLengthTest() {
-        String number = "860806655@";
-        assertTrue(validator.validatePhone(number));
+        String number = "+37060806";
+        assertFalse(validator.validatePhone(number));
     }
-
     @Test
     void phoneValidatorPrefixTest() {
-        String number = "860806655@";
+        String number = "860806912";
         assertTrue(validator.validatePhone(number));
     }
     //Tests for e-mail
     @Test
-    void emailValidatorContainsEtaTest() {
+    void emailValidatorCorrectTest() {
         String email = "projektavimas@gmail.com";
         assertTrue(validator.validatEmail(email));
+    }
+    @Test
+    void emailValidatorContainsEtaTest() {
+        String email = "projektavimasgmail.com";
+        assertFalse(validator.validatEmail(email));
     }
     @Test
     void emailValidatorSymbolTest() {
-        String email = "projektavimas@gmail.com";
-        assertTrue(validator.validatEmail(email));
+        String email = "p^^^@gmail.com";
+        assertFalse(validator.validatEmail(email));
     }
     @Test
     void emailValidatorDomainTest() {
-        String email = "projektavimas@gmail.com";
-        assertTrue(validator.validatEmail(email));
+        String email = "projektas@gmail.cpm";
+        assertFalse(validator.validatEmail(email));
     }
     @Test
     void emailValidatorTLDTest() {
-        String email = "projektavimas@gmail.com";
-        assertTrue(validator.validatEmail(email));
+        String email = "testas@asdf.com";
+        assertFalse(validator.validatEmail(email));
     }
     @AfterEach
     void tearDown() {
