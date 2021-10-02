@@ -12,4 +12,4 @@ Kaip jus galėtumete juos pagerinti
 	ATS.: Kai kurių unit testų funkcionalumas persidengia ir reikia abejiuose tikrinti tapatį dalyką, pavyzdžiui checkNumberStartingSymbol ir checkNumberStartingSymbol arba validEmailRequirement ir validEmailSymbolsRequirement. Manau galima tai padaryti vienu testu vietoj dviejų, bet čia labai minimalus dalykas. Šiaip testai buvo puikūs.
   
 Kokius unit testus jus galėtumėte pridėti (jei tokių yra)
-  ATS.: Gauti testai neturi "skylių" ir padengia visud reikiamus atvejus.
+	ATS.: Gauti testai neturi "skylių" ir padengia visud reikiamus atvejus.
