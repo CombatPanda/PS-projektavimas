@@ -1,7 +1,10 @@
 # PS-projektavimas
 Bartas Šaltenis PS3 II pogrupis Programų Sistemų Projektavimo laboratoriniai darbai
 ------------------------------------------------------------
-
+Užduotis 1.3 Bibliotekos panaudojimas:
+Kodas yra psp3dalis folderyje
+Validatoriai iš https://github.com/DonSabotini/PSP repo.
+Validatoriai gerai parašyti, lengvai suprantami, ką pridėčiau, tai daugiau specialių simbolių slaptažodžiui.
 ------------------------------------------------------------
 Validatoriai realizuoti yra src2 folderyje. Gautas repo: https://github.com/Kostas0613/PSP1 .
 
