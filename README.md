@@ -1,5 +1,6 @@
 # PS-projektavimas
 Bartas Šaltenis PS3 II pogrupis Programų Sistemų Projektavimo laboratoriniai darbai
+------------------------------------------------------------
 
 ------------------------------------------------------------
 Validatoriai realizuoti yra src2 folderyje. Gautas repo: https://github.com/Kostas0613/PSP1 .
